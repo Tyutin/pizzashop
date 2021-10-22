@@ -27,51 +27,26 @@
       <div class="header__toggle" :class="{ active : isToggleActive }" @click="ToggleNav" />
       <nav :class="{ active : isToggleActive }">
         <ul>
-          <!-- <li @click="ToggleNav">
-            <nuxt-link to="/#akcii">
-              комплексные обеды
-            </nuxt-link>
-          </li> -->
           <li @click="ToggleNav">
-            <nuxt-link to="/#pizza">
+            <a v-scroll-to="'#pizza'" to="#pizza">
               пицца
-            </nuxt-link>
+            </a>
           </li>
           <li @click="ToggleNav">
-            <nuxt-link to="/#pirogi">
+            <a v-scroll-to="'#pirogi'" to="#pirogi">
               пироги
-            </nuxt-link>
+            </a>
           </li>
           <li @click="ToggleNav">
-            <nuxt-link to="/#deserty">
+            <a v-scroll-to="'#deserty'" to="#deserty">
               десерты
-            </nuxt-link>
+            </a>
           </li>
           <li @click="ToggleNav">
-            <nuxt-link to="/#napitki">
+            <a v-scroll-to="'#napitki'" to="#napitki">
               напитки
-            </nuxt-link>
+            </a>
           </li>
-          <!-- <li @click="ToggleNav">
-            <nuxt-link to="/kompleksy">
-              доставка
-            </nuxt-link>
-          </li>
-          <li @click="ToggleNav">
-            <nuxt-link to="/kompleksy">
-              акции
-            </nuxt-link>
-          </li>
-          <li @click="ToggleNav">
-            <nuxt-link to="/#contacts">
-              контакты
-            </nuxt-link>
-          </li>
-          <li @click="ToggleNav">
-            <nuxt-link to="/kompleksy">
-              оставить отзыв
-            </nuxt-link>
-          </li> -->
         </ul>
       </nav>
     </div>
@@ -206,6 +181,7 @@
         font-size: 19px;
         font-family: "PantonSemiBold", sans-serif;
         text-transform: uppercase;
+        cursor: pointer;
 
         @media screen and (max-width: 1109px) {
           padding: 10px 20px;

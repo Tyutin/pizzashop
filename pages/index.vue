@@ -1,9 +1,6 @@
 <template>
   <div class="page">
-    <MenuSection :menuObject="menu.pizza" id="pizza"/>
-    <MenuSection :menuObject="menu.pirogi" id="pirogi"/>
-    <MenuSection :menuObject="menu.deserty" id="deserty"/>
-    <MenuSection :menuObject="menu.napitki" id="napitki"/>
+    <MenuSection v-for="menuItem in menuList" :key="menuItem.index" :menuObject="menu[menuItem]" :id=menuItem />
   </div>
 </template>
 
@@ -12,6 +9,9 @@ export default {
   computed: {
     menu() {
       return this.$store.state.data.menu
+    },
+    menuList() {
+      return Object.keys(this.menu)
     }
   }
 }
