@@ -1,0 +1,268 @@
+{
+  "menu": {
+    "pizza": {
+      "name": "Пицца",
+      "description": "Всегда качественные ингредиенты и свежее тесто, делают нашу пиццу такой восхитительно вкусной!",
+      "menu": [
+        {
+          "id": 1,
+          "type": "pizza",
+          "name": "Пицца Мясная",
+          "description": "Томатный соус, сыр моцарелла, колбаса пепперони, ветчина, бекон, копченая куриная грудка, свежие помидоры, огурцы, горчичный соус, пряные травы.",
+          "weight": 650,
+          "unit": "грамм",
+          "price": 360,
+          "image": "pizza-myasnaya.jpg"
+        },
+        {
+          "id": 2,
+          "type": "pizza",
+          "name": "Пицца Русская",
+          "description": "Сыр моцарелла, колбаса п/к, колбаса вареная,охотничьи колбаски, маринованные огурцы, свежий болгарский перец, горчичный соус, томатный соус.",
+          "weight": 590,
+          "unit": "грамм",
+          "price": 380,
+          "image": "pizza-russkaya.jpg"
+        },
+        {
+          "id": 3,
+          "type": "pizza",
+          "name": "Пицца Маргарита",
+          "description": "Томатный соус, сыр моцарелла, свежие помидоры.",
+          "weight": 550,
+          "unit": "грамм",
+          "price": 340,
+          "image": "pizza-margarita.png"
+        },
+        {
+          "id": 4,
+          "type": "pizza",
+          "name": "Пицца Баварская",
+          "description": "Томатный соус, сыр моцарелла, копченые колбаски, бекон, шампиньоны, ветчина, лук, свежие помидоры, огурцы, горчичный соус, пряные травы.",
+          "weight": 650,
+          "unit": "грамм",
+          "price": 380,
+          "image": "pizza-bavarskaya.jpg"
+        },
+        {
+          "id": 5,
+          "type": "pizza",
+          "name": "Пицца Аппетитная",
+          "description": "Томатный соус, сыр моцарелла, сервелат, бекон, свежие помидоры, огурцы, маслины, болгарский перец, сливочно-чесночный соус, пряные травы.",
+          "weight": 650,
+          "unit": "грамм",
+          "price": 380,
+          "image": "pizza-appetitnaya.jpg"
+        },
+        {
+          "id": 6,
+          "type": "pizza",
+          "name": "Пицца Техас",
+          "description": "Сыр моцарелла, лук, шампиньоны, помидоры, болгарский перец, перец халапеньо, куриная грудка, охотничьи колбаски, сливочно-чесночный соус, томатный соус, пряные травы.",
+          "weight": 650,
+          "unit": "грамм",
+          "price": 380,
+          "image": "pizza-tehas.jpg"
+        },
+        {
+          "id": 7,
+          "type": "pizza",
+          "name": "Пицца Пепперони",
+          "description": "Томатный соус, сыр моцарелла, колбаса пепперони.",
+          "weight": 530,
+          "unit": "грамм",
+          "price": 360,
+          "image": "pizza-pepperoni.jpg"
+        },
+        {
+          "id": 8,
+          "type": "pizza",
+          "name": "Пицца Колбасная",
+          "description": "Ветчина, сервелат, охотничьи колбаски, огурцы, помидоры, болгарский перец, сыр моцарелла, томатный соус, сливочно-чесночный соус.",
+          "weight": 710,
+          "unit": "грамм",
+          "price": 400,
+          "image": "pizza-kolbasnaya.jpg"
+        },
+        {
+          "id": 9,
+          "type": "pizza",
+          "name": "Пицца Домашняя",
+          "description": "Сыр моцарелла, шампиньоны, ветчина, свежие помидоры, соленые огурцы, томатный соус, сливочно-чесночный соус, пряные травы.",
+          "weight": 610,
+          "unit": "грамм",
+          "price": 360,
+          "image": "pizza-domashnyaya.jpg"
+        },
+        {
+          "id": 10,
+          "type": "pizza",
+          "name": "Пицца Ветчина и сыр",
+          "description": "Сыр моцарелла, ветчина, охотничьи колбаски, томатный соус.",
+          "weight": 600,
+          "unit": "грамм",
+          "price": 360,
+          "image": "pizza-vetchina-i-syr.jpg"
+        },
+        {
+          "id": 11,
+          "type": "pizza",
+          "name": "Пицца Ветчина и грибы",
+          "description": "Грибной соус, сыр моцарелла, шампиньоны, ветчина.",
+          "weight": 580,
+          "unit": "грамм",
+          "price": 360,
+          "image": "pizza-vetchina-i-griby.jpg"
+        },
+        {
+          "id": 12,
+          "type": "pizza",
+          "name": "Пицца Морская черепашка",
+          "description": "Сливочно-чесночный соус, сыр моцарелла, морепродукты (кальмары, мясо мидий, креветки), свежие помидоры, маслины.",
+          "weight": 600,
+          "unit": "грамм",
+          "price": 500,
+          "image": "pizza-morskaya-cherepashka.jpg"
+        },
+        {
+          "id": 13,
+          "type": "pizza",
+          "name": "Пицца Курица с ананасами",
+          "description": "Сыр моцарелла, томатный соус, копченое куриное филе, консервированные ананасы, свежие томаты.",
+          "weight": 530,
+          "unit": "грамм",
+          "price": 340,
+          "image": "pizza-kurica-s-ananasami.jpg"
+        },
+        {
+          "id": 14,
+          "type": "pizza",
+          "name": "Пицца Вегетарианская",
+          "description": "Сыр моцарелла, свежие помидоры, свежий болгарский перец, шампиньоны, свежие огурцы, лук, маслины, томатный соус.",
+          "weight": 600,
+          "unit": "грамм",
+          "price": 340,
+          "image": "pizza-kurica-s-ananasami.jpg"
+        }
+      ]
+    },
+    "pirogi": {
+      "name": "Пироги",
+      "description": "Вкусные пироги",
+      "menu": [
+        {
+          "id": 1,
+          "type": "pirog",
+          "name": "Пирог Жульен с ветчиной",
+          "description": "Тесто дрожжевое, яйцо, сыр моцарелла, ветчина, соус сливочно-чесночный.",
+          "weight": 640,
+          "unit": "грамм",
+          "price": 490,
+          "image": "pirog-julien-s-vetchinoi.jpg"
+        },
+        {
+          "id": 2,
+          "type": "pirog",
+          "name": "Пирог Жульен с грибами",
+          "description": "Тесто дрожжевое, яйцо, сыр моцарелла, грибы, соус сливочно-чесночный.",
+          "weight": 640,
+          "unit": "грамм",
+          "price": 450,
+          "image": "pirog-julien-s-gribami.jpg"
+        },
+        {
+          "id": 3,
+          "type": "pirog",
+          "name": "Пирог Жульен с ветчиной и грибами",
+          "description": "Тесто дрожжевое, яйцо, сыр моцарелла, ветчина, грибы, соус сливочно-чесночный.",
+          "weight": 640,
+          "unit": "грамм",
+          "price": 490,
+          "image": "pirog-julien-s-vetchinoi-i-gribami.jpg"
+        },
+        {
+          "id": 4,
+          "type": "pirog",
+          "name": "Пирог Жульен с карбонадом",
+          "description": "Тесто дрожжевое, яйцо, сыр моцарелла, карбонад, соус сливочно-чесночный.",
+          "weight": 640,
+          "unit": "грамм",
+          "price": 490,
+          "image": "pirog-julien-s-karbonadom.jpg"
+        }
+      ]
+    },
+    "deserty": {
+      "name": "Десерты",
+      "description": "Вкусные Десерты",
+      "menu": [
+        {
+          "id": 1,
+          "type": "desert",
+          "name": "Кексы с изюмом",
+          "description": "6 штук",
+          "weight": 290,
+          "unit": "грамм",
+          "price": 120,
+          "image": "keksy-s-izyumom.jpg"
+        }
+      ]
+    },
+    "napitki": {
+      "name": "Напитки",
+      "description": "Вкусные напитки",
+      "menu": [
+        {
+          "id": 1,
+          "type": "napitok",
+          "name": "Морс из чёрной смородины",
+          "description": "",
+          "weight": 0.5,
+          "unit": "л",
+          "price": 50,
+          "image": "mors-chernaya-smorodina-05.jpg"
+        },
+        {
+          "id": 2,
+          "type": "napitok",
+          "name": "Морс облепиховый",
+          "description": "",
+          "weight": 0.5,
+          "unit": "л",
+          "price": 50,
+          "image": "mors-oblepiha-05.jpg"
+        },
+        {
+          "id": 3,
+          "type": "napitok",
+          "name": "Фанта",
+          "description": "",
+          "weight": 0.9,
+          "unit": "л",
+          "price": 120,
+          "image": "fanta-09.jpg"
+        },
+        {
+          "id": 4,
+          "type": "napitok",
+          "name": "Кока-кола",
+          "description": "",
+          "weight": 0.9,
+          "unit": "л",
+          "price": 120,
+          "image": "cocacola-09.jpg"
+        },
+        {
+          "id": 4,
+          "type": "napitok",
+          "name": "Спрайт",
+          "description": "",
+          "weight": 0.9,
+          "unit": "л",
+          "price": 120,
+          "image": "sprite-09.jpg"
+        }
+      ]
+    }
+  }
+}

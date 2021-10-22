@@ -2,8 +2,8 @@
   <li class="menu-item">
     <img :src="image" :alt="menuItem.name" class="menu-item__image">
     <h3 class="menu-item__name">{{ menuItem.name }}</h3>
-    <p class="menu-item__description">{{ menuItem.description }}</p>
-    <p class="menu-item__weight">{{ menuItem.weight }} грамм</p>
+    <p v-if="menuItem.description" class="menu-item__description">{{ menuItem.description }}</p>
+    <p class="menu-item__weight">{{ menuItem.weight }} {{ menuItem.unit }}</p>
     <p class="menu-item__price">{{ menuItem.price }} руб.</p>
     <button class="menu-item__addtocart">В корзину</button>
   </li>
@@ -59,6 +59,7 @@
   
     @media (max-width: $tabletToMobile) {
       height: unset;
+      max-height: 480px;
     }
   }
 

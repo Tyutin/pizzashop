@@ -1,4 +1,4 @@
-import json from '@/static/pizzas.json'
+import json from '@/static/menu.json'
 
 export const state = () => ({
   data: json,

@@ -17,6 +17,7 @@
 
 <style lang="scss" scoped>
 .menu-list {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
