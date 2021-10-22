@@ -1,5 +1,5 @@
 <template>
-  <button class="cart-button" :class="{ popped : isCartActive }" v-if="cartLength > 0">
+  <button class="cart-button" :class="{ popped : isCartActive }" v-if="cartLength > 0" @click="openOrderForm">
     <img src="@/static/images/ccart.svg" alt="">
     <span class="cart-button__count">{{cartCount}}</span>
   </button>
@@ -21,7 +21,12 @@
       isCartActive() {
         return this.$store.state.cart.cartIsActive
       }
-    }
+    },
+    methods: {
+      openOrderForm() {
+        this.$store.commit('setOverlayActive', true)
+      }
+    },
   }
 </script>
 
