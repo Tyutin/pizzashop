@@ -5,7 +5,7 @@
     <p v-if="menuItem.description" class="menu-item__description">{{ menuItem.description }}</p>
     <p class="menu-item__weight">{{ menuItem.weight }} {{ menuItem.unit }}</p>
     <p class="menu-item__price">{{ menuItem.price }} руб.</p>
-    <button class="menu-item__addtocart">В корзину</button>
+    <button class="menu-item__addtocart" @click="addToCart(menuItem.id)">В корзину</button>
   </li>
 </template>
 
@@ -22,6 +22,15 @@
         return require(`@/static/images/menu/${this.menuItem.image}`)
       }
     },
+    methods: {
+      addToCart (id) {
+        this.$store.commit('cart/add', id)
+        this.$store.commit('cart/setCartIsActive', true)
+        setTimeout(() => {
+          this.$store.commit('cart/setCartIsActive', false)
+        }, 300)
+      }
+    }
   }
 </script>
 

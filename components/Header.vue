@@ -6,14 +6,14 @@
           <h1 class="header__info-title">Доставка пиццы в Ижевске</h1>
           <div class="header__info-social">
             <a target="_blank" href="https://vk.com/vkysnoizh" class="header__info-social-link">
-              <img src="@/static/vk.svg" alt="">
+              <img src="@/static/images/vk.svg" alt="">
             </a>
             <a target="_blank" href="https://www.instagram.com/pizza_zhivivkusno/" class="header__info-social-link">
-              <img src="@/static/inst.svg" alt="">
+              <img src="@/static/images/inst.svg" alt="">
             </a>
           </div>
         </div>
-        <img src="@/static/logo.png" alt="Живи Вкусно" class="header__logo">
+        <img src="@/static/images/logo.png" alt="Живи Вкусно" class="header__logo">
         <div class="header__info">
           <span class="header__info-text">Служба доставки</span>
           <a href="tel:+73412566640" class="header__info-phone">566-640</a>
