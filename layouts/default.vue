@@ -3,7 +3,7 @@
     <Header />
     <Nuxt />
     <CartIcon />
-    <Overlay v-if="isOverlayActive"  v-scroll-lock="isOverlayActive"/>
+    <OrderForm />
   </div>
 </template>
 
@@ -15,11 +15,6 @@ export default {
       if (localCart && Array.isArray(localCart)) {
         this.$store.commit('cart/set', localCart)
       }
-    }
-  },
-  computed: {
-    isOverlayActive() {
-      return this.$store.state.isOverlayActive
     }
   },
 }

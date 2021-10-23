@@ -1,13 +1,16 @@
 <template>
-  <div class="overlay" @click="openOrderForm" />
+  <div class="overlay" @click="closeOnClick">
+    <slot/>
+  </div>
 </template>
 
 <script>
   export default {
-    methods: {
-      openOrderForm() {
-        this.$store.commit('setOverlayActive', false)
-      }
+    props: {
+      closeOnClick: {
+        type: Function,
+        default: () => {}
+      },
     },
   }
 </script>
@@ -20,6 +23,6 @@
   left: 0;
   top: 0;
   background-color: #000000a3;
-  z-index: 100;
+  cursor: pointer;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <ul class="menu-list">
-    <MenuItem v-for="item in menuList" :key="item.id" :menuItem="item" />
+    <MenuItem v-for="item in menuList" :key="`${item.type}-${item.id}`" :menuItem="item" />
   </ul>
 </template>
 

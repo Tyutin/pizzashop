@@ -24,7 +24,7 @@
     },
     methods: {
       openOrderForm() {
-        this.$store.commit('setOverlayActive', true)
+        this.$store.commit('setOrderFormActive', true)
       }
     },
   }
