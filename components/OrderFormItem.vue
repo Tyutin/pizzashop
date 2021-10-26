@@ -57,7 +57,17 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  padding: 10px 0;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 599px) {
+    flex-wrap: wrap;
+    padding: 0;
+  }
 
   &__count {
     width: 30px;
@@ -69,6 +79,13 @@
     display: flex;
     align-items: center;
     margin-right: 10px;
+
+    @media (max-width: 599px) {
+      order: 1;
+      margin-left: 80px;
+      position: relative;
+      bottom: 15px;
+    }
   }
 
   &__count-button {
@@ -118,6 +135,10 @@
     margin-left: 10px;
     transform: rotate(45deg);
 
+    @media (max-width: 599px) {
+      order: 0;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -143,6 +164,12 @@
     font-weight: 600;
     flex-grow: 1;
     margin-right: 15px;
+
+    @media (max-width: 599px) {
+      width: calc(100vw - 145px);
+      order: 0;
+      font-size: 15px;
+    }
   }
 
   &__image {
@@ -151,12 +178,25 @@
     margin-right: 20px;
     object-fit: cover;
     border-radius: 7px;
+
+    @media (max-width: 599px) {
+      order: 0;
+      margin-right: 10px;
+      position: relative;
+      bottom: -10px;
+    }
   }
 
   &__summ {
     min-width: 55px;
     text-align: center;
     margin: 0 10px;
+
+    @media (max-width: 599px) {
+      order: 1;
+      position: relative;
+      bottom: 15px;
+    }
   }
 }
 </style>

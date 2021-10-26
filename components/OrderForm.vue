@@ -46,6 +46,9 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 10px 0;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
   }
 
   &__wrapper {
@@ -69,6 +72,12 @@
     background-color: #fff;
     z-index: 2;
     cursor: default;
+
+    @media (max-width: 599px) {
+      width: 100vw;
+      left: 0;
+      padding: 20px 10px;
+    }
   }
 
   &__title {
