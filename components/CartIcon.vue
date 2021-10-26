@@ -1,6 +1,5 @@
 <template>
-  <button class="cart-button" :class="{ popped : isCartActive }" v-if="cartLength > 0" @click="openOrderForm">
-    <img src="@/static/images/ccart.svg" alt="">
+  <button class="cart-button" :class="{ popped : isCartActiveClass }" v-if="cartLength > 0" @click="openOrderForm">
     <span class="cart-button__count">{{cartCount}}</span>
   </button>
 </template>
@@ -12,19 +11,15 @@
         return this.$store.state.cart.cart.length
       },
       cartCount() {
-        let count = 0;
-        this.$store.state.cart.cart.forEach(element => {
-          count += element.count
-        });
-        return count
+        return this.$store.state.cart.cartCount
       },
-      isCartActive() {
-        return this.$store.state.cart.cartIsActive
+      isCartActiveClass() {
+        return this.$store.state.cart.cartIsActiveClass
       }
     },
     methods: {
       openOrderForm() {
-        this.$store.commit('setOrderFormActive', true)
+        this.$store.commit('cart/setOrderFormActive', true)
       }
     },
   }
@@ -46,6 +41,10 @@
   cursor: pointer;
   background-color: #efefef;
   transition: transform 0.3s ease;
+  background-image: url("@/static/images/ccart.svg");
+  background-size: 68%;
+  background-repeat: no-repeat;
+  background-position: center;
 
   &:hover {
     transform: scale(1.1);
@@ -62,7 +61,7 @@
 
   @media (max-width: $tabletToMobile) {
     right: 15px;
-    bottom: 15px;    
+    bottom: 15px;
     width: 60px;
     height: 60px;
   }
@@ -71,7 +70,7 @@
     width: 50px;
     height: 50px;
 
-    @media (max-width: $tabletToMobile) {   
+    @media (max-width: $tabletToMobile) {
       width: 30px;
       height: 30px;
     }
@@ -90,7 +89,7 @@
     color: #fff;
     border-radius: 50%;
 
-    @media (max-width: $tabletToMobile) {   
+    @media (max-width: $tabletToMobile) {
       width: 23px;
       height: 23px;
       font-size: 12px;

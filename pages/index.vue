@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <MenuSection v-for="menuItem in menuList" :key="menuItem.index" :menuObject="menu[menuItem]" :id=menuItem />
+    <MenuSection v-for="menuItem in menuList" :key="`section_${menuItem.index}`" :menuObject="menu[menuItem]" :id=menuItem />
   </div>
 </template>
 

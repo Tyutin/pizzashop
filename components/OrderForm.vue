@@ -4,7 +4,7 @@
       <div class="order-form__block">
         <p class="order-form__title">Детали заказа</p>
         <ul class="order-form__list">
-          <OrderFormItem v-for="item in cart" :key="item.id" :item="item" />
+          <OrderFormItem v-for="item in cart" :key="`orderFormItem_${item.type}_${item.id}`" :item="item" />
         </ul>
       </div>
     </div>
@@ -15,7 +15,7 @@
   export default {
     computed: {
       isOrderFormActive() {
-        return this.$store.state.isOrderFormActive
+        return this.$store.state.cart.isOrderFormActive
       },
       cart() {
         return this.$store.state.cart.cart
@@ -25,7 +25,7 @@
       closeOrderForm(e){
         const target = e.target
         if(target.classList.contains('order-form__wrapper')) {
-          this.$store.commit('setOrderFormActive', false)
+          this.$store.commit('cart/setOrderFormActive', false)
         }
       }
     }
@@ -59,20 +59,20 @@
 
   &__block {
     position: absolute;
-    left: calc(50% - 280px);
+    left: calc(50% - 300px);
     top: 100px;
-    width: 560px;
+    width: 600px;
     min-height: 300px;
     display: flex;
     flex-direction: column;
-    padding: 40px;
+    padding: 30px;
     background-color: #fff;
     z-index: 2;
     cursor: default;
   }
 
   &__title {
-    font-family: 'PantonSemiBold';
+    font-family: "PantonSemiBold";
     font-size: 24px;
     text-align: center;
     margin-bottom: 40px;

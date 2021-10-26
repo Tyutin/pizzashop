@@ -2,8 +2,7 @@ import json from '@/static/menu.json'
 
 export const state = () => ({
   data: json,
-  isNavActive: false,
-  isOrderFormActive: false
+  isNavActive: false
 })
 
 export const mutations = {
@@ -14,8 +13,5 @@ export const mutations = {
   closeOverlay(state) {
     state.isOverlayActive = false;
     state.isNavActive = false;
-  },
-  setOrderFormActive(state, isActive) {
-    state.isOrderFormActive = isActive
   }
 }

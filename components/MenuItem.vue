@@ -25,9 +25,9 @@
     methods: {
       addToCart (id, type) {
         this.$store.commit('cart/add', {id:id, type:type})
-        this.$store.commit('cart/setCartIsActive', true)
+        this.$store.commit('cart/setCartIsActiveClass', true)
         setTimeout(() => {
-          this.$store.commit('cart/setCartIsActive', false)
+          this.$store.commit('cart/setCartIsActiveClass', false)
         }, 300)
       }
     }
@@ -42,20 +42,20 @@
   width: 350px;
   margin-bottom: 50px;
   margin-right: 45px;
-  
+
   @media (max-width: $pcToTablet) {
     width: 50%;
     margin: 0 0 45px;
     padding: 0 10px;
   }
 
-  &:nth-child(3n){
+  &:nth-child(3n) {
     margin-right: 0;
     @media (max-width: $pcToTablet) {
-    margin: 0 0 45px;
+      margin: 0 0 45px;
     }
   }
-  
+
   @media (max-width: $tabletToMobile) {
     width: 100%;
     margin-bottom: 60px;
@@ -65,7 +65,7 @@
     height: 250px;
     margin-bottom: 20px;
     object-fit: cover;
-  
+
     @media (max-width: $tabletToMobile) {
       height: unset;
       max-height: 480px;
