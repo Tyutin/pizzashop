@@ -22,7 +22,7 @@
     },
     computed: {
       tovar() {
-        return this.$store.state.data.menu[this.item.type].menu.find((el) => (el.id === this.item.id && el.type === this.item.type))
+        return this.$store.state.menu[this.item.type].menu.find((el) => (el.id === this.item.id && el.type === this.item.type))
       },
       name() {
         return this.tovar.name
@@ -39,13 +39,13 @@
         return this.menu[type].menu.find((el) => el.id === id).name
       },
       addToCart (id, type) {
-        this.$store.commit('cart/add', {id:id, type:type})
+        this.$store.commit('addToCart', {id:id, type:type})
       },
       deleteFromCart (id, type) {
-        this.$store.commit('cart/delete', {id:id, type:type})
+        this.$store.commit('deleteFromCart', {id:id, type:type})
       },
       removeFromCart(id, type) {
-        this.$store.commit('cart/remove', {id:id, type:type})
+        this.$store.commit('removeFromCart', {id:id, type:type})
       }
     },
   }

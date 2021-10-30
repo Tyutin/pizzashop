@@ -15,17 +15,17 @@
   export default {
     computed: {
       isOrderFormActive() {
-        return this.$store.state.cart.isOrderFormActive
+        return this.$store.state.isOrderFormActive
       },
       cart() {
-        return this.$store.state.cart.cart
+        return this.$store.state.cart
       }
     },
     methods: {
       closeOrderForm(e){
         const target = e.target
         if(target.classList.contains('order-form__wrapper')) {
-          this.$store.commit('cart/setOrderFormActive', false)
+          this.$store.commit('setOrderFormActive', false)
         }
       }
     }

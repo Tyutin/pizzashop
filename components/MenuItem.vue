@@ -24,10 +24,10 @@
     },
     methods: {
       addToCart (id, type) {
-        this.$store.commit('cart/add', {id:id, type:type})
-        this.$store.commit('cart/setCartIsActiveClass', true)
+        this.$store.commit('addToCart', {id:id, type:type})
+        this.$store.commit('setCartIsActiveClass', true)
         setTimeout(() => {
-          this.$store.commit('cart/setCartIsActiveClass', false)
+          this.$store.commit('setCartIsActiveClass', false)
         }, 300)
       }
     }

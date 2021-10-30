@@ -13,7 +13,7 @@ export default {
     if(process.client){
       const localCart = JSON.parse(localStorage.getItem('cart'));
       if (localCart && Array.isArray(localCart)) {
-        this.$store.commit('cart/set', localCart)
+        this.$store.commit('setCart', localCart)
       }
     }
   },

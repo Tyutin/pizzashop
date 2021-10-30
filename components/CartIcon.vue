@@ -8,15 +8,15 @@
   export default {
     computed: {
       cartCount() {
-        return this.$store.state.cart.cartCount
+        return this.$store.state.cartCount
       },
       isCartActiveClass() {
-        return this.$store.state.cart.cartIsActiveClass
+        return this.$store.state.cartIsActiveClass
       }
     },
     methods: {
       openOrderForm() {
-        this.$store.commit('cart/setOrderFormActive', true)
+        this.$store.commit('setOrderFormActive', true)
       }
     },
   }

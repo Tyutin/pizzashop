@@ -55,7 +55,7 @@
 
 <script>
   export default {
-      data () {
+    data () {
       return {
         isToggleActive: false
       }
@@ -93,7 +93,7 @@
     font-size: 24px;
   }
 
-  &__info-title{
+  &__info-title {
     margin-bottom: 10px;
     text-align: center;
     font-size: 24px;
@@ -101,7 +101,7 @@
 
   &__info-phone {
     color: #b80909;
-    font-family: 'PantonBold';
+    font-family: "PantonBold";
     font-size: 40px;
   }
 

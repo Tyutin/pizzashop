@@ -8,7 +8,7 @@
 export default {
   computed: {
     menu() {
-      return this.$store.state.data.menu
+      return this.$store.state.menu
     },
     menuList() {
       return Object.keys(this.menu)
