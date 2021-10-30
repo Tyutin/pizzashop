@@ -21,6 +21,14 @@ const updateCartAmount = (state) => {
   state.cartAmount = amount;
 }
 
+const updateCart = (state) => {
+  updateCartCount(state)
+  updateCartAmount(state)
+  if (!!localStorage) {
+    localStorage.setItem('cart', JSON.stringify(state.cart))
+  }
+}
+
 export const mutations = {
   setOrderFormActive(state, isActive) {
     state.isOrderFormActive = isActive
@@ -38,11 +46,7 @@ export const mutations = {
     } else {
       return
     }
-    updateCartCount(state)
-    updateCartAmount(state)
-    if (!!localStorage) {
-      localStorage.setItem('cart', JSON.stringify(state.cart))
-    }
+    updateCart(state)
   },
   delete(state, obj) {
     const { id, type } = obj
@@ -55,11 +59,7 @@ export const mutations = {
     if (state.cart.length < 1) {
       state.isOrderFormActive = false
     }
-    updateCartCount(state)
-    updateCartAmount(state)
-    if (!!localStorage) {
-      localStorage.setItem('cart', JSON.stringify(state.cart))
-    }
+    updateCart(state)
   },
   remove(state, obj) {
     const { id, type } = obj
@@ -68,15 +68,10 @@ export const mutations = {
     if (state.cart.length < 1) {
       state.isOrderFormActive = false
     }
-    updateCartCount(state)
-    updateCartAmount(state)
-    if (!!localStorage) {
-      localStorage.setItem('cart', JSON.stringify(state.cart))
-    }
+    updateCart(state)
   },
   set(state, localCart) {
     state.cart = localCart
-    updateCartCount(state)
-    updateCartAmount(state)
+    updateCart(state)
   }
 }

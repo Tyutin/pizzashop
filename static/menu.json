@@ -146,7 +146,7 @@
         }
       ]
     },
-    "pirogi": {
+    "pirog": {
       "name": "Пироги",
       "description": "Вкусные пироги",
       "menu": [
@@ -192,7 +192,7 @@
         }
       ]
     },
-    "deserty": {
+    "desert": {
       "name": "Десерты",
       "description": "Вкусные Десерты",
       "menu": [
@@ -208,7 +208,7 @@
         }
       ]
     },
-    "napitki": {
+    "napitok": {
       "name": "Напитки",
       "description": "Вкусные напитки",
       "menu": [
@@ -264,5 +264,40 @@
         }
       ]
     }
-  }
+  },
+  "gifts": [
+    {
+      "type": "present",
+      "condition": {
+        "name": "typeCartCount",
+        "type": "pizza",
+        "count": 2
+      },
+      "present": {
+        "type": "pizza",
+        "id": 3
+      }
+    },
+    {
+      "type": "present",
+      "condition": {
+        "name": "typeCartCount",
+        "type": "pizza",
+        "count": 2
+      },
+      "present": {
+        "type": "desert",
+        "id": 1
+      }
+    },
+    {
+      "type": "discount",
+      "condition": {
+        "name": "typeCartCount",
+        "type": "pizza",
+        "count": 3
+      },
+      "discount": 10
+    }
+  ]
 }
