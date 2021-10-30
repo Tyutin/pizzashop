@@ -41,10 +41,10 @@ export const mutations = {
     state.cartIsActiveClass = isActive
   },
   addToCart(state, obj) {
-    const { id, type } = obj
+    const { id, type, price } = obj
     const item = state.cart.find(el => (el.id === id && el.type === type))
     if (!item) {
-      state.cart.push({ id: id, count: 1, type: type })
+      state.cart.push({ id: id, count: 1, type: type, price: price })
     } else if (item.count < 50) {
       item.count++
     } else {

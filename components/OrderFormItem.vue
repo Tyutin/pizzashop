@@ -89,8 +89,10 @@
   }
 
   &__count-button {
-    width: 17px;
-    height: 17px;
+    max-width: 17px;
+    max-height: 17px;
+    min-height: 17px;
+    min-width: 17px;
     border-radius: 50%;
     border: 1px solid lightgrey;
     background-color: #fff;
@@ -127,7 +129,7 @@
       height: 9px;
       background-color: lightgrey;
       top: 3px;
-      left: 50%;
+      left: calc(50% - 1px);
     }
   }
 
