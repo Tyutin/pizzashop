@@ -1,5 +1,5 @@
 <template>
-  <button class="cart-button" :class="{ popped : isCartActiveClass }" v-if="cartLength > 0" @click="openOrderForm">
+  <button class="cart-button" :class="{ popped : isCartActiveClass }" v-if="cartCount > 0" @click="openOrderForm">
     <span class="cart-button__count">{{cartCount}}</span>
   </button>
 </template>
@@ -7,9 +7,6 @@
 <script>
   export default {
     computed: {
-      cartLength() {
-        return this.$store.state.cart.cart.length
-      },
       cartCount() {
         return this.$store.state.cart.cartCount
       },

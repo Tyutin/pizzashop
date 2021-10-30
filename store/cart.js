@@ -1,6 +1,7 @@
 export const state = () => ({
   cart: [],
   cartCount: 0,
+  cartAmount: 0,
   cartIsActiveClass: false,
   isOrderFormActive: false
 })
@@ -11,6 +12,13 @@ const updateCartCount = (state) => {
     count += el.count;
   });
   state.cartCount = count;
+}
+const updateCartAmount = (state) => {
+  let amount = 0;
+  state.cart.forEach((el) => {
+    amount += el.count * el.price;
+  });
+  state.cartAmount = amount;
 }
 
 export const mutations = {
@@ -31,6 +39,7 @@ export const mutations = {
       return
     }
     updateCartCount(state)
+    updateCartAmount(state)
     if (!!localStorage) {
       localStorage.setItem('cart', JSON.stringify(state.cart))
     }
@@ -47,6 +56,7 @@ export const mutations = {
       state.isOrderFormActive = false
     }
     updateCartCount(state)
+    updateCartAmount(state)
     if (!!localStorage) {
       localStorage.setItem('cart', JSON.stringify(state.cart))
     }
@@ -59,6 +69,7 @@ export const mutations = {
       state.isOrderFormActive = false
     }
     updateCartCount(state)
+    updateCartAmount(state)
     if (!!localStorage) {
       localStorage.setItem('cart', JSON.stringify(state.cart))
     }
@@ -66,5 +77,6 @@ export const mutations = {
   set(state, localCart) {
     state.cart = localCart
     updateCartCount(state)
+    updateCartAmount(state)
   }
 }
