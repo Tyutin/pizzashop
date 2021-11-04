@@ -100,37 +100,20 @@
     cursor: pointer;
   }
 
-  &__minus {
-    &::before {
-      content: "";
-      position: absolute;
-      width: 9px;
-      height: 1px;
-      background-color: lightgrey;
-      top: 50%;
-      left: 3px;
-    }
+  &__minus::before,
+  &__plus::before,
+  &__plus::after {
+    content: "";
+    position: absolute;
+    background-color: lightgrey;
+    width: 9px;
+    height: 1px;
+    top: 50%;
+    left: 3px;
   }
 
-  &__plus {
-    &::before {
-      content: "";
-      position: absolute;
-      width: 9px;
-      height: 1px;
-      background-color: lightgrey;
-      top: 50%;
-      left: 3px;
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      width: 1px;
-      height: 9px;
-      background-color: lightgrey;
-      top: 3px;
-      left: calc(50% - 1px);
-    }
+  &__plus::after {
+    transform: rotate(90deg);
   }
 
   &__remove {
@@ -141,7 +124,8 @@
       order: 0;
     }
 
-    &::before {
+    &::before,
+    &::after {
       content: "";
       position: absolute;
       width: 13px;
@@ -150,14 +134,9 @@
       top: 47%;
       left: 1px;
     }
+
     &::after {
-      content: "";
-      position: absolute;
-      width: 1px;
-      height: 13px;
-      background-color: lightgrey;
-      top: 1px;
-      left: calc(50% - 1px);
+      transform: rotate(90deg);
     }
   }
 
