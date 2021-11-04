@@ -102,7 +102,7 @@
 
   &__addtocart {
     padding: 10px 40px;
-    background-color: #b80909;
+    background-color: $red;
     color: #fff;
     border-radius: 3px;
     border: none;

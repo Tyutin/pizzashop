@@ -283,7 +283,7 @@
       "condition": {
         "name": "typeCartCount",
         "type": "pizza",
-        "count": 2
+        "count": 3
       },
       "present": {
         "type": "desert",
@@ -295,9 +295,10 @@
       "condition": {
         "name": "typeCartCount",
         "type": "pizza",
-        "count": 3
+        "count": 4
       },
-      "discount": 10
+      "discount": 10,
+      "description": "Скидка 10% на весь заказ"
     }
   ]
 }

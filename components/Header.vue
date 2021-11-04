@@ -100,7 +100,7 @@
   }
 
   &__info-phone {
-    color: #b80909;
+    color: $red;
     font-family: "PantonBold";
     font-size: 40px;
   }
@@ -139,7 +139,7 @@
 
     @media screen and (max-width: 1109px) {
       height: 100%;
-      background-color: #b80909;
+      background-color: $red;
       align-items: center;
       padding: 12px 14px;
     }

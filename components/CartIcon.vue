@@ -82,7 +82,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #b80909;
+    background-color: $red;
     color: #fff;
     border-radius: 50%;
 
