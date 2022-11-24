@@ -7,6 +7,7 @@
           <OrderFormItem v-for="item in cart" :key="`orderFormItem_${item.type}_${item.id}`" :item="item" />
         </ul>
         <OrderFormGifts />
+        <OrderFormTotal />
       </div>
     </div>
   </div>

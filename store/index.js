@@ -8,6 +8,7 @@ export const state = () => ({
   cart: [],
   cartCount: 0,
   cartAmount: 0,
+  cartDiscountAmount: 0,
   cartIsActiveClass: false,
   isOrderFormActive: false
 })
@@ -25,6 +26,18 @@ const checkGiftCondition = (state, gift) => {
       if (cartCount >= count) state.accessGifts.push(gift);
       break;
     default:
+      break;
+  }
+}
+const checkActiveGift = (state) => {
+  if (Object.keys(state.activeGift) === 0) return
+  switch (state.activeGift.type) {
+    case 'discount':
+      const { discount } = state.activeGift
+      state.cartDiscountAmount = ((state.cartAmount / 100) * (100 - discount)).toFixed()
+      break;
+    default:
+      state.cartDiscountAmount = 0
       break;
   }
 }
@@ -55,6 +68,7 @@ const updateCart = (state) => {
   updateCartCount(state)
   updateCartAmount(state)
   updateGifts(state)
+  checkActiveGift(state)
   if (!!localStorage) {
     localStorage.setItem('cart', JSON.stringify(state.cart))
   }
@@ -69,6 +83,7 @@ export const mutations = {
   },
   setActiveGift(state, gift) {
     state.activeGift = gift;
+    checkActiveGift(state)
   },
   addToCart(state, obj) {
     const { id, type, price } = obj

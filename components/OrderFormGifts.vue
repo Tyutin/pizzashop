@@ -62,7 +62,7 @@ import ClickOutside from 'vue-click-outside'
 .order-form-gifts {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 20px;
 
   &__current-gift-button {
     position: absolute;

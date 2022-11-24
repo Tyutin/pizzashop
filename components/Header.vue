@@ -33,17 +33,17 @@
             </a>
           </li>
           <li @click="ToggleNav">
-            <a v-scroll-to="'#pirogi'" to="#pirogi">
+            <a v-scroll-to="'#pirog'" to="#pirogi">
               пироги
             </a>
           </li>
           <li @click="ToggleNav">
-            <a v-scroll-to="'#deserty'" to="#deserty">
+            <a v-scroll-to="'#desert'" to="#deserty">
               десерты
             </a>
           </li>
           <li @click="ToggleNav">
-            <a v-scroll-to="'#napitki'" to="#napitki">
+            <a v-scroll-to="'#napitok'" to="#napitki">
               напитки
             </a>
           </li>

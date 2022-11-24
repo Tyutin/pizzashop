@@ -276,7 +276,8 @@
       "present": {
         "type": "pizza",
         "id": 3
-      }
+      },
+      "description": "Пицца 'Маргарита' за 2 пиццы в чеке"
     },
     {
       "type": "present",
@@ -288,7 +289,8 @@
       "present": {
         "type": "desert",
         "id": 1
-      }
+      },
+      "description": "Кексы с изюмом за 3 пиццы в чеке"
     },
     {
       "type": "discount",
@@ -297,8 +299,8 @@
         "type": "pizza",
         "count": 4
       },
-      "discount": 10,
-      "description": "Скидка 10% на весь заказ"
+      "discount": 13,
+      "description": "Скидка 10% на весь заказ за 4 пиццы в чеке"
     }
   ]
 }
